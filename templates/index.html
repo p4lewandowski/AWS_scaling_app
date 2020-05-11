@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}<html>
+<head>
+<html>
+  <head>
+  </head>
+  <body>
+  <form action="http://plewando-bucket.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="awsaccesskeyid" value="AKIAJCLCIG43DNLLUDWQ"/>
+    <input type="hidden" name="key" value="images/${filename}" />
+    <input type="hidden" name="acl" value="bucket-owner-full-control" />
+    <input type="hidden" name="success_action_redirect" value="http://elb-plewando-2069902841.us-east-1.elb.amazonaws.com/uploaded" />
+    <input type="hidden" name="Content-Type" value="image/png" />
+    <input type="hidden" name="Policy" value="CnsKImV4cGlyYXRpb24iOiAiMjAyMC0xMi0wMVQwMDowMDowMFoiLAogICJjb25kaXRpb25zIjogWwogICAgeyJidWNrZXQiOiAicGxld2FuZG8tYnVja2V0In0sCiAgICBbInN0YXJ0cy13aXRoIiwgIiRrZXkiLCAiaW1hZ2VzLyJdLAogICAgeyJhY2wiOiAiYnVja2V0LW93bmVyLWZ1bGwtY29udHJvbCJ9LAogICAgeyJzdWNjZXNzX2FjdGlvbl9yZWRpcmVjdCI6ICJodHRwOi8vZWxiLXBsZXdhbmRvLTIwNjk5MDI4NDEudXMtZWFzdC0xLmVsYi5hbWF6b25hd3MuY29tL3VwbG9hZGVkIn0sCiAgICBbInN0YXJ0cy13aXRoIiwgIiRDb250ZW50LVR5cGUiLCAiaW1hZ2UvIl0sCiAgICBbImNvbnRlbnQtbGVuZ3RoLXJhbmdlIiwgMCwgMTAxMDEwMV0KICBdCn0K" />
+    <input type="hidden" name="Signature" value="QOqqclEjq4cwMwXhzpMF8cpeyg8=" />
+    <input type="file"   name="file" /> <br />
+    <!-- The elements after this will be ignored -->
+    <input type="submit" name="submit" value="Upload" />
+  </form>
+</html>
+{% endblock %}

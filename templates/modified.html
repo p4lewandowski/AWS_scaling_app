@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}<html>
+<head>
+</head>
+<body>
+{% for i in range(size) %}
+    <a href={{url_list[i]}}>{{image_list[i]}}<a/>
+    <br></br>
+{% endfor %}
+</body>
+</html>
+{% endblock %}

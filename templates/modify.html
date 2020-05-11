@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block body %}<html>
+<head>
+</head>
+<body>
+<form action="/queue" method="POST">
+<select name="images" multiple>
+{% for image_name in image_list %}
+    <option>{{image_name}}</option>
+{% endfor %}
+</select>
+<br></br>
+<input type="submit" name="submit" value="Modify">
+<br></br>
+</form>
+</body>
+<body>
+{% for i in range(size) %}
+    <a href={{url_list[i]}}>{{image_list[i]}}<a/>
+    <br></br>
+{% endfor %}
+</body>
+</html>
+{% endblock %}
